@@ -12,7 +12,7 @@
       </div>
       <div class="boxmain">
         <div class="box axiosbox">
-          <el-button @click="handleAxiosTest">Axios 数据请求 Test</el-button>
+          <el-button @click="handleAxiosTest">Axios Test</el-button>
           <div style="margin: 20px 0 0">
             <pre v-if="axiosResult">{{axiosResult}}</pre>
           </div>
@@ -37,7 +37,7 @@
 
         <div class="box langbox">
           <el-button @click="handleToTest('test')">
-            Vuex Store 状态管理
+            Vuex 状态管理
             <span class="el-icon-aim"></span>
           </el-button>
           <div style="margin: 20px 0 0">
