@@ -6,7 +6,7 @@
         nuxtjs 
       </h2>
       <div class="links">
-        <a href="javascript:;" @click="handleToTest('test')" target="_blank" class="button--green">
+        <a @click="handleToTest('test')" target="_blank" class="button--green">
           进入路由测试
         </a>
       </div>
