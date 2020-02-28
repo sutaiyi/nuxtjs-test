@@ -94,6 +94,7 @@ export default {
   created() {
   },
   mounted() {
+    console.log(process.env.REQUERY_PROT);
     // 国际化 初始化
     const language = localStorage.getItem('language') ||
     this.$store.state.language;

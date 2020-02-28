@@ -1,4 +1,4 @@
-
+console.log(process.env.API_ENV, process.env.REQUERY_IP);
 module.exports = {
   mode: 'universal',
   /*
@@ -56,16 +56,27 @@ module.exports = {
     extend (config, ctx) {
     }
   },
+  // 是否启用代理
+  axios: {
+    proxy: true
+  },
   // 代理配置
   proxy: {
     '/api': {
-      target: process.env.NODE_ENV !== 'production' ? 'http://192.168.8.3:8070' : 'https://newdex.vip',
+      target: process.env.NODE_ENV !== 'production' ? `http://${process.env.REQUERY_IP}:${process.env.REQUERY_PROT}` : 'https://newdex.vip',
       pathRewrite: {
         '^/api' : '/api'
       }
     }
   },
+  // 环境变量配置
+  env: {
+    API_ENV: process.env.API_ENV,
+    REQUERY_IP: process.env.REQUERY_IP,
+    REQUERY_PROT: process.env.REQUERY_PROT
+  },
   
+  // 服务配置
   server: {
     port: 2300, // default: 3000
     host: '0.0.0.0' // default: localhost
