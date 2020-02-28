@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development API_ENV=dev REQUERY_IP=192.168.8.3 REQUERY_PROT=8080 nodemon server/index.js --watch server",
-    "test": "cross-env NODE_ENV=development API_ENV=test REQUERY_IP=183.250.89.179 REQUERY_PROT=18080 nodemon server/index.js",
+    "test": "cross-env NODE_ENV=development API_ENV=test REQUERY_IP=183.250.89.179 REQUERY_PROT=18080",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate"
